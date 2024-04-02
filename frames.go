@@ -58,7 +58,7 @@ func main() {
 			}
 			if u != nil {
 				videoFile = u.URI().String()
-				fileLabel.SetText(videoFile)
+				fileLabel.SetText(u.URI().Name())
 				inputSelected = true
 			}
 		}, w)
@@ -76,7 +76,7 @@ func main() {
 			}
 			if u != nil {
 				outputFolder = u.String()
-				folderLabel.SetText(outputFolder)
+				folderLabel.SetText(u.Path())
 				outputSelected = true
 			}
 		}, w)
